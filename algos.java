@@ -437,25 +437,25 @@ static int convertToBase10(int[ ] a, int base){
      }
      return tot;
 }
-/*static int matches(int[ ] a, int[ ] p){
+static int matches(int[ ] a, int[ ] p){
     int breakPoint=0; int match=0;int abstot=0;int index=0;
     for( int i=0;i<p.length;i++){
         for(int j=breakPoint;j< a.length;j++){
 
-//        if( p[i] > 0){
-//            if(a[j]<0) {
-//                match=0;
-//                break;
-//            }
-//            abstot+=a[j];
-//        }else{
-//            if(a[j]>0) {
-//                match=0;
-//                break;
-//            }
-//            abstot+= Math.abs( a[j]);
-//        }
-//
+       if( p[i] > 0){
+           if(a[j]<0) {
+               match=0;
+               break;
+           }
+           abstot+=a[j];
+       }else{
+           if(a[j]>0) {
+               match=0;
+               break;
+           }
+           abstot+= Math.abs( a[j]);
+       }
+
         System.out.println("Res: "+a[j]);
         int currIndex=Math.abs(p[i])+index;
         if(j==currIndex){
@@ -468,7 +468,7 @@ static int convertToBase10(int[ ] a, int base){
     }
     if(match==1&&abstot==a.length) return 1;
     return 0;
-}*/
+}
 
 // re:do:
 static int matches (int[]a, int[]p){
